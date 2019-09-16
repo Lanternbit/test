@@ -13,6 +13,7 @@
 2. 아두이노 코드
 
 void setup() {
+
   Serial.begin(9600);
 }
 int a;
