@@ -90,25 +90,25 @@ int v[1000];
 
 void push(int a){  
 
-v[++sp]=a;
+	v[++sp]=a;
 
 }
 
 int pop(){      
 
-return(v[sp--]);
+	return(v[sp--]);
 
 }
 
 void main(){
 
-push(5);
+	push(5);
 
-push(3);
+	push(3);
 
-printf("%d\n", pop());
+	printf("%d\n", pop());
 
-printf("%d\n", pop());
+	printf("%d\n", pop());
 
 }
 
