@@ -33,3 +33,114 @@ void main(){
 ------------------------------------------------------------------------------------------------------------------------
 
 4. 두 실수를 키보드로 받고 더해서 화면에 출력하시오.
+
+#include<stdio.h>
+void main(){
+  float a, b;
+  puts("더할 두 수를 입력하시오.");
+  scanf("%f%f", &a, &b);
+  printf("%f\n", a + b);
+}
+
+------------------------------------------------------------------------------------------------------------------------
+
+5. 두 실수를 메모리에 저장하고 함수 add()를 활용하여 더한 결과를 리턴 받아 화면에 출력하시오.
+
+#include<stdio.h>
+float add (float a, float b){
+  return a + b;
+void main(){
+  float a = 3.2, b= 2.3 ;
+  printf ("%f\n", add(a,b)) ;
+}
+
+------------------------------------------------------------------------------------------------------------------------
+
+6. my.txt에 33과 22가 들어 있다. 이를 읽고 더하고 결과를 출력하시오.
+
+#include<stdio.h>
+#include<stdlib.h>
+int add(int a, int b) {
+	return a + b;
+}
+int main() {
+	int a, b;
+	FILE* fp = fopen("my1.txt", "r");
+	if (fp == NULL) {
+		puts("File not found!");
+		exit(0);
+	}
+	fscanf(fp, "%d%d", &a, &b);
+	fclose(fp);
+	printf("%d\n", add(a, b));
+}
+
+------------------------------------------------------------------------------------------------------------------------
+
+7. 3개의 과일을 {"Banana", "Orange", "Kiwi"} 초기화 하고 화면에 출력하시오.
+
+#include<stdio.h>
+int main() {
+	int i;
+	const char *c[3] = { "Banana", "Orange", "Kiwi" };
+	for(i=0;i<3;i++)
+		printf("%s\n", c[i]);
+}
+    
+------------------------------------------------------------------------------------------------------------------------
+
+8. 곱셈용 명령창 계산기를 구현하시오. 매개변수가 2개 이하면 프로그램이 종료된다. 예) mul 10 * 2 결과) 20
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(int n, char* v[]) {
+	int a, b, c;
+	if (n < 2) {
+		printf("매개변수가 모자랍니다.\n");
+		exit(0);
+	}
+	a = atoi(v[1]);
+	b = atoi(v[3]);
+	switch (v[2][0]) {
+	case '*': c = a * b; break;
+	default: break;
+	}
+	printf("%d\n", c);
+}
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+9. 두 명의 {이름, 나이, 이메일}을 구조체 배열에 초기화하고 화면에 출력하시오.
+
+#include<stdio.h>
+struct User {
+	char n[80];
+	int age;
+	char t[80];
+};
+void main() {
+	struct User we[2] = { {"jcshim", 18, "jcshim@gmail.com"}, {"jskim", 16, "jskim@gmail.com"} };
+	printf("%s %d %s\n", we[0].n, we[0].age, we[0].t);
+	printf("%s %d %s\n", we[1].n, we[1].age, we[1].t);
+}
+
+------------------------------------------------------------------------------------------------------------------------
+
+10. 두 명의 {이름과 나이 그리고 이메일}을 구조체 배열에 초기화하고, 함수 pr()에 포인터 전달하고 화면에 출력하시오.
+
+#include<stdio.h>
+struct User {
+	char n[80];
+	int age;
+	char t[80];
+}; 
+void pr(struct User* p) {
+	printf("%s %d %s\n", p->n, p->age, p->t);
+	p++;
+	printf("%s %d %s\n", p->n, p->age, p->t);
+}
+void main() {
+	struct User we[2] = { {"jcshim", 18, "jcshim@gmail.com"}, {"jskim", 16, "jskim@gmail.com"} };
+	pr(we);
+}
