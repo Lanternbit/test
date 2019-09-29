@@ -25,7 +25,7 @@
 노래하며 춤추는 로봇을 만들어보자.
 아두이노는 절차 지향 언어로서 여러가지 일을 동시에 진행하는 방법에 대해 아직 배우지 못했다.
 동시에 진행되는듯이 보여야 하는 기능은 세가지로
-1) 피에조 스피커를 이용한 노래재생
+1) 피에조 스피커를 이용한 노래재생 ( 엘리제를 위하여 - 베토벤 )
 2) 방향을 전환하며 춤추기
 3) 조도센서를 이용해 빛의 일정 밝기를 기준으로 달라지는 노래의 속도와 춤추며 다니는 거리
 이다.
@@ -487,7 +487,6 @@ sr.detach();
 3. 동영상 및 회로도
 
 동영상 : https://youtu.be/XU_xXO-TPK0
-채널 (동영상 안될 때) : https://www.youtube.com/channel/UC3BQY3FHK9kEuMTbNXTqySg?view_as=subscriber
 회로도 : https://github.com/Lanternbit/test/blob/master/anu1/%5B%ED%8C%80%EA%B3%BC%EC%A0%9C%5D%20%EC%B6%A4%EC%B6%94%EB%8A%94%20%EB%A1%9C%EB%B4%87%EB%A7%8C%EB%93%A4%EA%B8%B0.PNG
 
 
