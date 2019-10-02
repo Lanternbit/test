@@ -1,0 +1,217 @@
+아두이노로 더듬이로 주행하는 로봇만들기
+
+                                                                                                7조(서경호, 이호현, 이주협, 김동해)
+                                                                                                
+[과제 내용]
+
+1) ABot의 자율주행을 구현하시오.
+
+  - 물체를 만나면 피해 가도록 하시오.
+
+2) 유튜브 60초 이내 동영상을 제작하고 youtube 올린다.
+
+3) 우리 팀에서 추가한 기능을 설명하기
+
+4) 소스코드
+
+5) 작성소감 
+
+-----------------------------------------------------------------------------------------------------------------------
+
+[과제 실습]
+
+1. 유튜브 : 
+
+-----------------------------------------------------------------------------------------------------------------------
+
+2. 추가한 기능
+
+  - 장애물을 만나면 경고음으로 피에조 스피커를 통해 '삑' 소리를 낸다.
+  - 조도센서를 이용해 주위가 어두워지면 작동을 멈춘다.
+  - 양 쪽에 LED를 조립하여 부딪히는 방향의 불을 점멸한다.
+  
+  ---------------------------------------------------------------------------------------------------------------------
+  
+3. 소스코드
+
+void setup() {
+
+pinMode(7, INPUT_PULLUP);
+
+pinMode(5, INPUT_PULLUP);
+
+pinMode(3, OUTPUT);
+
+pinMode(13, OUTPUT);
+
+sl.attach(13);
+
+sr.attach(12);
+
+}
+
+void loop()
+
+{
+
+Serial.begin(9600);
+  
+int a;
+
+long pm = 0;
+
+int ld=1;
+
+a = analogRead(A0);
+
+Serial.println(++a);
+
+delay(50);
+
+byte wl = digitalRead(5);
+
+byte wr = digitalRead(7);
+
+long cm=millis();
+
+if(cm-pm>500){
+
+cm=pm;
+
+ld = !ld;
+
+digitalWrite(3,ld);
+
+digitalWrite(13,ld);
+
+}
+
+if ((wl == 0) && (wr == 0)){
+
+  digitalWrite(13, HIGH);
+
+  digitalWrite(3, HIGH);
+
+  if(cm-pm>500){
+
+cm=pm;
+
+ld = !ld;
+
+digitalWrite(3,ld);
+
+digitalWrite(13,ld);
+
+  }
+
+  
+
+backward(1000);
+
+turnLeft(600);
+
+}
+
+else if (wl == 0){
+
+  digitalWrite(3, HIGH);
+
+   if(cm-pm>500){
+
+cm=pm;
+
+ld = !ld;
+
+digitalWrite(3,ld);
+
+  }
+
+backward(1000);
+
+turnRight(400);
+
+}
+
+else if (wr == 0){
+
+  digitalWrite(13, HIGH);
+
+  if(cm-pm>500){
+
+cm=pm;
+
+ld = !ld;
+
+digitalWrite(13,ld);
+
+  }
+
+backward(1000);
+
+turnLeft(400);
+
+}
+
+else{
+
+forward(20);
+
+}
+
+if ( a > 1018 ) {
+
+sl.write(1500);
+
+sr.write(1500);
+
+delay(1000);
+
+  }
+}
+
+void forward(int time){
+
+sl.write(1700);
+
+sr.write(1300);
+
+delay(time);
+
+}
+
+void turnLeft(int time){
+
+sl.write(1300);
+
+sr.write(1300);
+
+delay(time);
+
+}
+
+void turnRight(int time){
+
+sl.write(1700);
+
+sr.write(1700);
+
+delay(time);
+
+}
+
+void backward(int time) {
+
+sl.write(1300);
+
+sr.write(1700);
+
+tone(4,659,500);
+
+delay(time);
+
+}
+
+------------------------------------------------------------------------------------------------------------
+
+4. 소감
+
