@@ -18,7 +18,7 @@ md anu // anu디렉토리 생성
 
 cd anu // anu로 이동
 
-notepad main.c // main텍스트파일 저장 - 계산들의 프로토타입과 출력코드로 이뤄져 있음
+notepad test.c // main텍스트파일 저장 - 계산들의 프로토타입과 출력코드로 이뤄져 있음
 -  #include<stdio.h>
 -  int add(int a, int b);
 -  int sub(int a, int b);
@@ -70,9 +70,9 @@ cl /c *.c // c의 모든 파일들을 컴파일
 
 lib /OUT:my.lib add.obj sub.obj mul.obj div.obj mod.obj sha.obj // my라이브러리를 만들고 만들었던 함수들을 라이브러리에 포함하기
 
-link main my.lib // main파일에 my라이브러리를 링크
+link test my.lib // main파일에 my라이브러리를 링크
 
-main // 실행
+test // 실행
 
 ------------------------------------------------------------------------------------------------------------------------
 
