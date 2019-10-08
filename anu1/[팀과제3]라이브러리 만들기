@@ -1,0 +1,92 @@
+라이브러리 만들기
+
+                                                                                                2팀 ( 서경호, 임병훈)
+                                                                                                
+[과제 내용]
+
+1. 덧셈, 뺄셈, 곱셈, 나눗셈, 모듈라(%), 몫 여섯가지를 my.lib로 만들고 test.c 에서 데모를 하는 코드를 작성하시오.
+
+2. 이 코드를 github에 코멘트와 함께 올리고 링크를 스마트 lms에 제출하시오.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+[과제 실습]
+
+cd\ // 파일 제일 위쪽으로 위치를 이동
+
+md anu // anu디렉토리 생성
+
+cd anu // anu로 이동
+
+notepad main.c // main텍스트파일 저장 - 계산들의 프로토타입과 출력코드로 이뤄져 있음
+-  #include<stdio.h>
+-  int add(int a, int b);
+-  int sub(int a, int b);
+-  int mul(int a, int b);
+-  float div(int a, int b);
+-  int mod(int a, int b);
+-  int sha(int a, int b);
+-  void main(){
+-    int a=10, b=3;
+-    printf("%d\n", add(a,b));
+-    printf("%d\n", sub(a,b));
+-    printf("%d\n", mul(a,b));
+-    printf("%f\n", div(a,b));
+-    printf("%d\n", mod(a,b));
+-    printf("%d\n", sha(a,b));
+-  }
+
+notepad add.c // add함수 저장
+-  int add(int a, int b){
+-    return a+b;
+-  }
+
+notepad sub.c // sub함수 저장
+-  int sub(int a, int b){
+-    return a-b ;
+-  }
+
+notepad mul.c // mul함수 저장
+-  int mul(int a, int b){
+-   return a*b ;
+-  }
+
+notepad div.c // div함수 저장
+-  float div(float a, float b){
+-    return a/b ;
+-  }
+
+notepad mod.c // mod함수 저장
+-  int mod(int a, int b){
+-    return a%b ;
+-  }
+
+notepad sha.c // sha함수 저장
+-  int sha(int a, int b){
+-    return a/b ;
+-  }
+
+cl /c *.c // c의 모든 파일들을 컴파일
+
+lib /OUT:my.lib add.obj sub.obj mul.obj div.obj mod.obj sha.obj // my라이브러리를 만들고 만들었던 함수들을 라이브러리에 포함하기
+
+link main my.lib // main파일에 my라이브러리를 링크
+
+main // 실행
+
+------------------------------------------------------------------------------------------------------------------------
+
+[결과]
+
+사진 링크 : 
+
+------------------------------------------------------------------------------------------------------------------------
+
+[소감]
+
+서경호 : 처음으로 개발자 명령 프롬프트를 통해 코딩과 컴파일 그리고 실행까지 진행한 과제였습니다. 이번 기회를 통해 개발자 명령 프롬프트가 
+더욱 익숙해진 것 같습니다. 팀원과 함께 토의하고 서로 모르는 부분을 가르쳐주면서 제가 이해한 부분도 다시 되짚어 보는 의미에서 좋은 경험이
+되었다고 생각합니다. 더욱 더 정진하는 학생이 되어 열정적이고 성실한 개발자가 되도록 노력하겠습니다.
+
+임병훈 : 처음에는 이해가 잘 가지는 않았지만 옆에분이 잘 설명을 해주어서 이해를 할 수 있었다. 집가서 한번 오늘 하였던 팀 과제에 대해서 다시
+해봐야 할 것 같다는 생각이 들었습니다 .
