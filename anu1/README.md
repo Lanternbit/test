@@ -64,11 +64,11 @@ void draw(){
 
 #### -Designer
 
-![앱인벤터 디자인](https://mail.naver.com/read/image/?mailSN=8922&attachIndex=3&contentType=image/png&offset=43997&size=220714&maxSize=200&mimeSN=1573380905.127226.14821.18176&u=seolg0810)
+![앱인벤터 디자인](C:\Users\서승윤\Desktop\학업\19-2\창의공학\과제 사진\아두이노 스크린)
 
 #### -Blocks
 
-![앱인벤터 블럭](https://mail.naver.com/read/image/?mailSN=8922&attachIndex=2&contentType=image/png&offset=1448&size=42284&maxSize=200&mimeSN=1573380905.127226.14821.18176&u=seolg0810)
+![앱인벤터 블럭]()
 
 ### 4. 유튜브
 
