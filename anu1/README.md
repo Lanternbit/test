@@ -64,11 +64,11 @@ void draw(){
 
 #### -Designer
 
-![앱인벤터 디자인](![아두이노 블럭](https://user-images.githubusercontent.com/50915637/68542469-2b32b800-03f0-11ea-8140-95b6d94c4191.PNG)
+![아두이노 블럭](https://user-images.githubusercontent.com/50915637/68542469-2b32b800-03f0-11ea-8140-95b6d94c4191.PNG)
 
 #### -Blocks
 
-![앱인벤터 블럭](![아두이노 스크린](https://user-images.githubusercontent.com/50915637/68542471-2cfc7b80-03f0-11ea-87ba-924670773774.PNG)
+![아두이노 스크린](https://user-images.githubusercontent.com/50915637/68542471-2cfc7b80-03f0-11ea-87ba-924670773774.PNG)
 
 ### 4. 유튜브
 
