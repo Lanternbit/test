@@ -126,7 +126,8 @@ void backward(int time) {                    // Backward function
 
 
 
-</hr>
+<hr/
+>
 
 
 ### 소감
