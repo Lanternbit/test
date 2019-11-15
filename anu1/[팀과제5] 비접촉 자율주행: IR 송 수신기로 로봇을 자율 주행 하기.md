@@ -117,7 +117,7 @@ void backward(int time) {                    // Backward function
 }
 ```
 
-### 회로도 ( 피에조 스피커는 부착하지 않았다. )
+### 회로도 ( 피에조 스피커 제외 )
 
 ![브레드보드](https://user-images.githubusercontent.com/50915637/68905408-6b918d80-0784-11ea-9096-69c6887d5dd7.PNG)
 
