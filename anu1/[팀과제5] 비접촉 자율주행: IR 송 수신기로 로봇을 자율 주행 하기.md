@@ -126,8 +126,7 @@ void backward(int time) {                    // Backward function
 https://youtu.be/Byyw9zJp2Uw
 
 
-<hr/
->
+<hr/>
 
 
 ### 소감
